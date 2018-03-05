@@ -66,38 +66,7 @@ class RandomWordsState extends State<RandomWords> {
     Navigator.of(context).push(
       new MaterialPageRoute(
         builder: (context) {
-          final tiles = _saved.map(
-                (pair) {
-              return new ListTile(
-                  title: new Text(
-                    pair.asPascalCase,
-                    style: _biggerFont,
-                  ),
-                  trailing: new Icon(
-                    Icons.favorite,
-                    color: Colors.red,
-                  ),
-                  onTap: () {
-                    setState(() {
-                      _saved.remove(pair);
-                    });
-                  }
-              );
-            },
-          );
-
-          final divided = ListTile
-              .divideTiles(
-            context: context,
-            tiles: tiles,
-          ).toList();
-
-          return new Scaffold(
-            appBar: new AppBar(
-              title: new Text('Saved Suggestions.'),
-            ),
-            body: new ListView(children: divided),
-          );
+          return new SavedSuggestions(saved: _saved);
         },
       ),
     );
@@ -113,6 +82,55 @@ class RandomWordsState extends State<RandomWords> {
         ],
       ),
       body: _buildSuggestions(),
+    );
+  }
+}
+
+class SavedSuggestions extends StatefulWidget {
+  SavedSuggestions({Key key, this.saved}) : super(key: key);
+
+  final Set<WordPair> saved;
+
+  @override
+  _SavedSuggestionsState createState() => new _SavedSuggestionsState();
+}
+
+class _SavedSuggestionsState extends State<SavedSuggestions> {
+  final _biggerFont = const TextStyle(fontSize: 18.0);
+
+  @override
+  Widget build(BuildContext context) {
+    final tiles = widget.saved.map(
+          (pair) {
+        return new ListTile(
+            title: new Text(
+              pair.asPascalCase,
+              style: _biggerFont,
+            ),
+            trailing: new Icon(
+              Icons.favorite,
+              color: Colors.red,
+            ),
+            onTap: () {
+              setState(() {
+                widget.saved.remove(pair);
+              });
+            }
+        );
+      },
+    );
+
+    final divided = ListTile
+        .divideTiles(
+      context: context,
+      tiles: tiles,
+    ).toList();
+
+    return new Scaffold(
+      appBar: new AppBar(
+        title: new Text('Saved Suggestions.'),
+      ),
+      body: new ListView(children: divided),
     );
   }
 }
