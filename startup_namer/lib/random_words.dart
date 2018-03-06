@@ -1,6 +1,7 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:startup_namer/saved_suggestions.dart';
+import 'package:startup_namer/word_pair_context.dart';
 
 class RandomWords extends StatefulWidget {
   @override
@@ -10,7 +11,7 @@ class RandomWords extends StatefulWidget {
 class RandomWordsState extends State<RandomWords> {
   final _suggestions = <WordPair>[];
 
-  final _saved = new Set<WordPair>();
+  final _saved = new Set<WordPairContext>();
 
   final _biggerFont = const TextStyle(fontSize: 18.0);
 
@@ -42,9 +43,62 @@ class RandomWordsState extends State<RandomWords> {
   }
 
   Widget _buildRow(WordPair pair) {
-    final alreadyFavorited = _saved.contains(pair);
+    final alreadyJudged = _saved.map((p) => p.wordPair).contains(pair);
+    final WordPairContext wordPairContext = _saved.firstWhere((p) => p.wordPair == pair, orElse: () => null);
 
-    return new ListTile(
+    Column buildButtonColumn(IconData icon, Color color, handlePress) {
+
+      return new Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          new IconButton(icon: new Icon(icon, color: color), onPressed: handlePress),
+        ],
+      );
+    }
+
+    return new Container(
+      child: new Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          new Expanded(
+            child: new Text(
+              pair.asPascalCase,
+              style: _biggerFont,
+            ),
+          ),
+          buildButtonColumn(Icons.thumb_up, alreadyJudged && wordPairContext.isLiked ? Colors.green : Colors.black26, (pair) {
+            return () {
+              setState(() {
+                if (alreadyJudged && wordPairContext.isLiked) {
+                  _saved.removeWhere((p) => p.wordPair == pair);
+                } else {
+                  _saved.removeWhere((p) => p.wordPair == pair);
+                  _saved.add(new WordPairContext(pair, isLiked: true));
+                }
+              });
+            };
+          }(pair)),
+          new Container(
+            margin: const EdgeInsets.only(left: 80.0, right: 30.0),
+            child: buildButtonColumn(Icons.thumb_down, alreadyJudged && !wordPairContext.isLiked ? Colors.green : Colors.black26, (pair) {
+              return () {
+                setState(() {
+                  if (alreadyJudged && !wordPairContext.isLiked) {
+                    _saved.removeWhere((p) => p.wordPair == pair);
+                  } else {
+                    _saved.removeWhere((p) => p.wordPair == pair);
+                    _saved.add(new WordPairContext(pair, isLiked: false));
+                  }
+                });
+              };
+            }(pair))
+          ),
+        ],
+      ),
+    );
+
+/*    return new ListTile(
         title: new Text(
           pair.asPascalCase,
           style: _biggerFont,
@@ -62,7 +116,7 @@ class RandomWordsState extends State<RandomWords> {
             }
           });
         }
-    );
+    );*/
   }
 
   void _pushSaved() {
