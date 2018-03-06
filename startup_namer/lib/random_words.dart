@@ -97,26 +97,6 @@ class RandomWordsState extends State<RandomWords> {
         ],
       ),
     );
-
-/*    return new ListTile(
-        title: new Text(
-          pair.asPascalCase,
-          style: _biggerFont,
-        ),
-        trailing: new Icon(
-          alreadyFavorited ? Icons.favorite : Icons.favorite_border,
-          color: alreadyFavorited ? Colors.red : null,
-        ),
-        onTap: () {
-          setState(() {
-            if (alreadyFavorited) {
-              _saved.remove(pair);
-            } else {
-              _saved.add(pair);
-            }
-          });
-        }
-    );*/
   }
 
   void _pushSaved() {

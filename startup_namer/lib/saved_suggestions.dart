@@ -8,15 +8,15 @@ class SavedSuggestions extends StatefulWidget {
   final Set<WordPairContext> saved;
 
   @override
-  _SavedSuggestionsState createState() => new _SavedSuggestionsState();
+  SavedSuggestionsState createState() => new SavedSuggestionsState();
 }
 
-class _SavedSuggestionsState extends State<SavedSuggestions> {
+class SavedSuggestionsState extends State<SavedSuggestions> {
   final _biggerFont = const TextStyle(fontSize: 18.0);
 
   void _handleRemoveFavorite(WordPairContext pair) {
     setState(() {
-      // TODO fix - widget.saved.remove(pair);
+      widget.saved.removeWhere((p) => p.wordPair == pair.wordPair);
     });
   }
 
@@ -57,18 +57,34 @@ class WordPairListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new ListTile(
-        title: new Text(
-          pair.wordPair.asPascalCase,
-          style: _biggerFont,
-        ),
-        trailing: new Icon(
-          Icons.favorite,
-          color: Colors.red,
-        ),
-        onTap: () {
-          onUnfavorite(pair);
-        }
+    Column buildButtonColumn(IconData icon, Color color) {
+
+      return new Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          new IconButton(icon: new Icon(icon, color: color), onPressed: () { onUnfavorite(pair);}),
+        ],
+      );
+    }
+
+    return new Container(
+      child: new Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          new Expanded(
+            child: new Text(
+              pair.wordPair.asPascalCase,
+              style: _biggerFont,
+            ),
+          ),
+          buildButtonColumn(Icons.thumb_up, pair.isLiked ? Colors.green : Colors.black26),
+          new Container(
+              margin: const EdgeInsets.only(left: 80.0, right: 30.0),
+              child: buildButtonColumn(Icons.thumb_down, !pair.isLiked ? Colors.green : Colors.black26)
+          ),
+        ],
+      ),
     );
   }
 }
