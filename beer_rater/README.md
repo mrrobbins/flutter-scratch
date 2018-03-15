@@ -1,3 +1,3 @@
-# startup_namer
+# beer_rater
 
 https://flutter.io/get-started/codelab/

@@ -1,8 +1,7 @@
 import 'dart:async';
 
-import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
-import 'package:startup_namer/beer.dart';
+import 'package:beer_rater/beer.dart';
 
 class Beers extends StatefulWidget {
   @override
@@ -10,11 +9,16 @@ class Beers extends StatefulWidget {
 }
 
 class BeersState extends State<Beers> {
-  final _saved = new Set.from([new Beer("Guinness"), new Beer("Columbus IPA")]);
+  var _saved = new List<Beer>();
 
   Beer _newBeer = null;
 
   final _biggerFont = const TextStyle(fontSize: 18.0);
+
+  initState() async {
+    _saved = await Beer.getBeers();
+    setState(() {});
+  }
 
   @override
   Widget build(BuildContext context) {

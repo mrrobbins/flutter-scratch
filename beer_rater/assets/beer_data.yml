@@ -1,0 +1,107 @@
+beers:
+- name: "Columbus Creeper"
+  liked: true
+- name: "Yazoo Amarillo Pale"
+  liked: true
+- name: "Murphy Stout"
+  liked: true
+- name: "Sweet water IPA"
+  liked: false
+- name: "Fuller's London Porter"
+  liked: null
+- name: "#9 not quite pal ale"
+  liked: true
+- name: "rogue hazelnut"
+  liked: false
+- name: "miller lite"
+  liked: true
+- name: "21st Amendment Back in Black"
+  liked: true
+- name: "Portsmouth Pilsner"
+  liked: true
+- name: "Ohio Raspberry"
+  liked: true
+- name: "Rat Tail Ale"
+  liked: false
+- name: "Rivertown Porter"
+  liked: true
+- name: "Bell's Winter White Ale"
+  liked: true
+- name: "Crabbie's Original Alcoholic Ginger Beer"
+  liked: true
+- name: "Sam Adam's Winter Lager"
+  liked: true
+- name: "Sam Adams Cold Snap"
+  liked: true
+- name: "Sea Dog Wild Blueberry Wheat Ale"
+  liked: true
+- name: "Abita Pecan Harvest Ale"
+  liked: true
+- name: "Kentucky Bourbon Barrel Ale (high gravity)"
+  liked: true
+- name: "Snapseed"
+  liked: false
+- name: "Bells 2 Hearted"
+  liked: false
+- name: "Anchor Steam"
+  liked: true
+- name: "Yazoo Dos Perros"
+  liked: true
+- name: "Goose Island 312 Ale"
+  liked: true
+- name: "Jackie P's Mystic Mama"
+  liked: true
+- name: "Breckenridge Summerbright Ale"
+  liked: true
+- name: "Delirium Tremens"
+  liked: true
+- name: "Carlsberg Elephant Malt"
+  liked: true
+- name: "Four Strings IPA"
+  liked: true
+- name: "Curious Traveler Shandy"
+  liked: true
+- name: "North Coast Scrimshaw"
+  liked: true
+- name: "Rodenbach Grand Cru"
+  liked: true
+- name: "Rosa hibiscus ale (fist pull)"
+  liked: true
+- name: "Five Lizard Five Rabbits Passion fruit Wheat"
+  liked: false
+- name: "Great Lakes Edmund Fitzgerald"
+  liked: true
+- name: "North Coast - Shrimshaw Pilsner"
+  liked: true
+- name: "Jack-o Traveler Shandy"
+  liked: true
+- name: "Goose Island Matilda"
+  liked: true
+- name: "Great Bay Snaggle Tooth Stout"
+  liked: true
+- name: "Goose Island Sofie (light)"
+  liked: true
+- name: "Gaffel Kolsh Lager"
+  liked: true
+- name: "Estrella Dam Daura"
+  liked: true
+- name: "Epic Brewing"
+  liked: true
+- name: "Belgian Wit"
+  liked: true
+- name: "Imperial Red Ale"
+  liked: false
+- name: "Smoked Porter"
+  liked: true
+- name: "Rios Rompin Rye"
+  liked: false
+- name: "Mid Mountain Mild"
+  liked: false
+- name: "Wasatch Jalepeno Cream Ale"
+  liked: true
+- name: "Thirsty Dog Siberian Night Russian Imperial Stout"
+  liked: true
+- name: "Xingu, Brazil, Dark look/light taste"
+  liked: true
+- name: "North High Milk Stout"
+  liked: true
