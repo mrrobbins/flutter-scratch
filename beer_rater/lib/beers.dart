@@ -51,7 +51,7 @@ class BeersState extends State<Beers> {
                       hintText: 'e.g. Guinness'
                   ),
                 onChanged: (value) {
-                  _newBeer = new Beer(value);
+                  _newBeer = new Beer("", value);
                 },
               )
             ),
@@ -110,7 +110,7 @@ class BeersState extends State<Beers> {
         children: [
           new Expanded(
             child: new Text(
-              beer.name,
+              beer.brewer + ": " + beer.name,
               style: _biggerFont,
             ),
           ),

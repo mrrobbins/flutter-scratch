@@ -1,107 +1,151 @@
 beers:
 - name: "Columbus Creeper"
+  brewer: "Columbus Brewing Company"
   liked: true
-- name: "Yazoo Amarillo Pale"
+- name: "Amarillo Pale Ale"
+  brewer: "Yazoo Brewing Company"
   liked: true
-- name: "Murphy Stout"
+- name: "Murphy's Irish Stout"
+  brewer: "Murphy Brewery Ireland Limited"
   liked: true
-- name: "Sweet water IPA"
+- name: "Sweetwater IPA"
+  brewer: "SweetWater Brewing Company"
   liked: false
 - name: "Fuller's London Porter"
-  liked: null
-- name: "#9 not quite pal ale"
+  brewer: "Fuller Smith & Turner PLC"
   liked: true
-- name: "rogue hazelnut"
+- name: "Hi-#9 Not Quite India Pale Ale"
+  brewer: "Magic Hat Brewing Company"
+  liked: true
+- name: "Hazelnut Brown Nectar"
+  brewer: "Rogue Ales"
   liked: false
-- name: "miller lite"
+- name: "Miller Lite"
+  brewer: "Miller Brewing Co."
   liked: true
-- name: "21st Amendment Back in Black"
+- name: "Back In Black"
+  brewer: "21st Amendment Brewery"
   liked: true
-- name: "Portsmouth Pilsner"
+- name: "Portsmouth Brewing Pilsner"
+  brewer: "Portsmouth Brewing Co."
   liked: true
-- name: "Ohio Raspberry"
+- name: "Raspberry Ale"
+  brewer: "Thirsty Dog Brewing Company"
   liked: true
 - name: "Rat Tail Ale"
+  brewer: "Cellar Rats Brewery"
   liked: false
-- name: "Rivertown Porter"
+- name: "Roebling Vanilla Espresso Porter"
+  brewer: "Rivertown Brewery & Barrel House"
   liked: true
 - name: "Bell's Winter White Ale"
+  brewer: "Bell's Brewery - Eccentric Café & General Store"
   liked: true
-- name: "Crabbie's Original Alcoholic Ginger Beer"
+- name: "Original Alcoholic Ginger Beer"
+  brewer: "John Crabbie & Co"
   liked: true
-- name: "Sam Adam's Winter Lager"
+- name: "Samuel Adams Winter Lager"
+  brewer: "Boston Beer Company (Samuel Adams)"
   liked: true
-- name: "Sam Adams Cold Snap"
+- name: "Samuel Adams Cold Snap"
+  brewer: "Boston Beer Company (Samuel Adams)"
   liked: true
-- name: "Sea Dog Wild Blueberry Wheat Ale"
+- name: "Sea Dog Blueberry Wheat Ale"
+  brewer: "Sea Dog Brewing Company"
   liked: true
-- name: "Abita Pecan Harvest Ale"
+- name: "Pecan Ale"
+  brewer: "Abita Brewing Co."
   liked: true
-- name: "Kentucky Bourbon Barrel Ale (high gravity)"
+- name: "Kentucky Bourbon Barrel Ale"
+  brewer: "Alltech's Lexington Brewing and Distilling "
   liked: true
-- name: "Snapseed"
+- name: "Two Hearted Ale"
+  brewer: "Bell's Brewery - Eccentric Café & General Store"
   liked: false
-- name: "Bells 2 Hearted"
-  liked: false
-- name: "Anchor Steam"
+- name: "Anchor Steam Beer"
+  brewer: "Anchor Brewing Company"
   liked: true
-- name: "Yazoo Dos Perros"
+- name: "Dos Perros"
+  brewer: "Yazoo Brewing Company"
   liked: true
-- name: "Goose Island 312 Ale"
+- name: "312 Urban Wheat"
+  brewer: "Goose Island Beer Co."
   liked: true
-- name: "Jackie P's Mystic Mama"
+- name: "Mystic Mama"
+  brewer: "Jackie O's Pub & Brewery"
   liked: true
-- name: "Breckenridge Summerbright Ale"
+- name: "SummerBright Ale"
+  brewer: "Breckenridge Brewery"
   liked: true
 - name: "Delirium Tremens"
+  brewer: "Brouwerij Huyghe"
   liked: true
-- name: "Carlsberg Elephant Malt"
+- name: "Elephant Beer"
+  brewer: "Carlsberg Danmark A/S"
   liked: true
-- name: "Four Strings IPA"
+- name: "Switch Blade IPA"
+  brewer: "Four String Brewing Company"
   liked: true
-- name: "Curious Traveler Shandy"
+- name: "Curious Traveler Lemon Shandy"
+  brewer: "The Traveler Beer Co."
   liked: true
-- name: "North Coast Scrimshaw"
+- name: "Scrimshaw Pilsner"
+  brewer: "North Coast Brewing Co."
   liked: true
 - name: "Rodenbach Grand Cru"
+  brewer: "Brouwerij Rodenbach N.V."
   liked: true
-- name: "Rosa hibiscus ale (fist pull)"
+- name: "Rosa Hibiscus Ale"
+  brewer: "Revolution Brewing"
   liked: true
-- name: "Five Lizard Five Rabbits Passion fruit Wheat"
+- name: "5 Lizard"
+  brewer: "5 Rabbit Cerveceria"
   liked: false
-- name: "Great Lakes Edmund Fitzgerald"
+- name: "Edmund Fitzgerald Porter"
+  brewer: "Great Lakes Brewing Co."
   liked: true
-- name: "North Coast - Shrimshaw Pilsner"
+- name: "Jack-O Traveler Shandy"
+  brewer: "The Traveler Beer Co."
   liked: true
-- name: "Jack-o Traveler Shandy"
+- name: "Matilda"
+  brewer: "Goose Island Beer Co."
   liked: true
-- name: "Goose Island Matilda"
+- name: "Snaggletooth Stout"
+  brewer: "Great South Bay Brewery"
   liked: true
-- name: "Great Bay Snaggle Tooth Stout"
+- name: "Sofie"
+  brewer: "Goose Island Beer Co."
   liked: true
-- name: "Goose Island Sofie (light)"
+- name: "Gaffel Kölsch"
+  brewer: "Privatbrauerei Gaffel Becker & Co."
   liked: true
-- name: "Gaffel Kolsh Lager"
+- name: "Estrella Damm Daura"
+  brewer: "Damm S. A."
   liked: true
-- name: "Estrella Dam Daura"
-  liked: true
-- name: "Epic Brewing"
-  liked: true
-- name: "Belgian Wit"
+- name: "Wit Beer"
+  brewer: "Epic Brewing Company"
   liked: true
 - name: "Imperial Red Ale"
+  brewer: "Epic Brewing Company"
   liked: false
 - name: "Smoked Porter"
+  brewer: "Epic Brewing Company"
   liked: true
-- name: "Rios Rompin Rye"
+- name: "Rio's Rompin Rye Beer"
+  brewer: "Epic Brewing Company"
   liked: false
-- name: "Mid Mountain Mild"
+- name: "Mid Mountain Mild Ale"
+  brewer: "Epic Brewing Company"
   liked: false
-- name: "Wasatch Jalepeno Cream Ale"
+- name: "Wasatch Jalapeño Cream Ale"
+  brewer: "Wasatch Brewery"
   liked: true
-- name: "Thirsty Dog Siberian Night Russian Imperial Stout"
+- name: "Siberian Night Imperial Stout"
+  brewer: "Thirsty Dog Brewing Company"
   liked: true
-- name: "Xingu, Brazil, Dark look/light taste"
+- name: "Xingu Black Beer"
+  brewer: "Cervejaria Kaiser"
   liked: true
-- name: "North High Milk Stout"
+- name: "Milk Stout"
+  brewer: "North High Brewing Company"
   liked: true
