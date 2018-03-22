@@ -109,9 +109,20 @@ class BeersState extends State<Beers> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           new Expanded(
-            child: new Text(
-              beer.brewer + ": " + beer.name,
-              style: _biggerFont,
+            child: new Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                new Container(
+                  padding: const EdgeInsets.only(bottom: 8.0),
+                  child: new Text(
+                    beer.name,
+                    style: _biggerFont,
+                  ),
+                ),
+                new Text(
+                  beer.brewer,
+                ),
+              ],
             ),
           ),
           buildButtonColumn(Icons.thumb_up, beer.isRated() && beer.isLiked ? Colors.green : Colors.black26, (beer) {
@@ -122,7 +133,7 @@ class BeersState extends State<Beers> {
             };
           }(beer)),
           new Container(
-            margin: const EdgeInsets.only(left: 80.0, right: 30.0),
+            margin: const EdgeInsets.only(left: 15.0, right: 0.0),
             child: buildButtonColumn(Icons.thumb_down, beer.isRated() && !beer.isLiked ? Colors.green : Colors.black26, (beer) {
               return () {
                 setState(() {

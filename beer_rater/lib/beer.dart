@@ -17,7 +17,7 @@ class Beer {
   }
 
   static Future getBeers() async {
-    var data = await read_yaml_asset("assets/beer_data.yml");
+    var data = await read_yaml_asset("assets/beer-data-short.yml");
     List<Beer> beers = data["beers"].map((beer) =>
     new Beer(beer["brewer"], beer["name"], isLiked: beer["liked"])
     ).toList();

@@ -1,0 +1,16 @@
+beers:
+- name: "Misconstrued Sarcasm"
+  brewer: "Random Precision Brewing Company"
+  liked: true
+- name: "Bending Towards the Sun"
+  brewer: "Random Precision Brewing Company"
+  liked: false
+- name: "Columbus Creeper"
+  brewer: "Columbus Brewing Company"
+  liked: true
+- name: "Amarillo Pale Ale"
+  brewer: "Yazoo Brewing Company"
+  liked: true
+- name: "Murphy's Irish Stout"
+  brewer: "Murphy Brewery Ireland Limited"
+  liked: true
