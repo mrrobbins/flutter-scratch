@@ -24,7 +24,7 @@ class BeersState extends State<Beers> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('Beer Rater'),
+        title: new Text('Beer with Friends'),
       ),
       body: _buildSuggestions(),
       floatingActionButton: new FloatingActionButton(
@@ -36,6 +36,8 @@ class BeersState extends State<Beers> {
   }
 
   Future<DismissDialogAction> _addBeer() async {
+    String _beer;
+    String _brewer;
     return await showDialog<DismissDialogAction>(
       context: context,
       child: new _SystemPadding(
@@ -43,16 +45,29 @@ class BeersState extends State<Beers> {
           title: const Text('Add a beer'),
           children: <Widget>[
             new Padding(
+                padding: const EdgeInsets.only(left: 20.0),
+                child: new TextField(
+                  autofocus: true,
+                  decoration: new InputDecoration(
+                      labelText: 'What are you drinking?',
+                      hintText: 'e.g. Misconstrued Sarcasm'
+                  ),
+                  onChanged: (beer) {
+                    _beer = beer;
+                  },
+                )
+            ),
+            new Padding(
               padding: const EdgeInsets.only(left: 20.0),
               child: new TextField(
                   autofocus: true,
                   decoration: new InputDecoration(
-                      labelText: 'Beer name',
-                      hintText: 'e.g. Guinness'
+                      labelText: 'Who brewed it?',
+                      hintText: 'e.g. Random Precision Brewing Company'
                   ),
-                onChanged: (value) {
-                  _newBeer = new Beer("", value);
-                },
+                  onChanged: (brewer) {
+                    _brewer = brewer;
+                  },
               )
             ),
             new ButtonBar(
@@ -61,7 +76,7 @@ class BeersState extends State<Beers> {
                   new FlatButton(
                     onPressed: () {
                       setState(() {
-                        _saved.add(_newBeer);
+                        _saved.add(new Beer(_brewer, _beer));
                       });
                       Navigator.pop(context, DismissDialogAction.save);
                     },
