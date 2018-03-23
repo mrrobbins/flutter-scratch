@@ -4,7 +4,7 @@ beers:
   liked: true
 - name: "Bending Towards the Sun"
   brewer: "Random Precision Brewing Company"
-  liked: false
+  liked: true
 - name: "Columbus Creeper"
   brewer: "Columbus Brewing Company"
   liked: true

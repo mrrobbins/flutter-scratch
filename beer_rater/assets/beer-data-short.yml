@@ -4,13 +4,13 @@ beers:
   liked: true
 - name: "Bending Towards the Sun"
   brewer: "Random Precision Brewing Company"
+  liked: true
+- name: "Switch Blade IPA"
+  brewer: "Four String Brewing Company"
+  liked: true
+- name: "Estrella Damm Daura"
+  brewer: "Damm S. A."
+  liked: true
+- name: "Mid Mountain Mild Ale"
+  brewer: "Epic Brewing Company"
   liked: false
-- name: "Columbus Creeper"
-  brewer: "Columbus Brewing Company"
-  liked: true
-- name: "Amarillo Pale Ale"
-  brewer: "Yazoo Brewing Company"
-  liked: true
-- name: "Murphy's Irish Stout"
-  brewer: "Murphy Brewery Ireland Limited"
-  liked: true

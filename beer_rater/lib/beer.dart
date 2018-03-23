@@ -21,6 +21,10 @@ class Beer {
     List<Beer> beers = data["beers"].map((beer) =>
     new Beer(beer["brewer"], beer["name"], isLiked: beer["liked"])
     ).toList();
+    beers.sort((a, b) {
+      return a.name.compareTo(b.name);
+    });
+
     return beers;
   }
 }
